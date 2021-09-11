@@ -13,13 +13,15 @@ final class SearchLocationsPresenter: SearchLocationPresenterInputProtocol {
     var interactor: SearchLocationInteractorInputProtocol?
     var router: SearchLocationRouterProtocol?
     
+    //private var locations: [LocationEntity] = []
+    
     func getLocations(with text: String) {
-       // TODO
+        interactor?.execute(location: text)
     }
 }
 
 extension SearchLocationsPresenter: SearchLocationInteractorOutputProtocol {
     func didGetLocations(locations: [LocationEntity]) {
-        //TODO
+        view?.didGetLocations(locations: locations)
     }
 }

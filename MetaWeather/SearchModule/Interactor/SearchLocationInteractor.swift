@@ -13,17 +13,18 @@ final class SearchLocationInteractor: SearchLocationInteractorInputProtocol {
     var service: SearchLocationServiceInputProtocol?
     
     func execute(location: String) {
-        //TODO
+        service?.getLocation(location)
     }
 }
 
 extension SearchLocationInteractor: SearchLocationServiceOutputProtocol {
     func didRetrieveLocations(_ locations: [LocationEntity]) {
-        //todo
+        presenter?.didGetLocations(locations: locations)
+        print(locations)
     }
     
     func didAnErrorOcurred() {
-        //todo
+        print("Error en el servicio de locations")
     }
     
     
