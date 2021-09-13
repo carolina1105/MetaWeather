@@ -28,8 +28,8 @@
 		18ED2E5626ED4D47005293BD /* SearchLocationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED2E5426ED4D47005293BD /* SearchLocationsViewController.xib */; };
 		18ED2E5826ED4DC2005293BD /* SearchLocationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E5726ED4DC2005293BD /* SearchLocationsPresenter.swift */; };
 		18ED2E5A26ED4E89005293BD /* SearchLocationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E5926ED4E89005293BD /* SearchLocationsRouter.swift */; };
-		18ED2E5E26ED5EE6005293BD /* SearchLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E5C26ED5EE6005293BD /* SearchLocationsTableViewCell.swift */; };
-		18ED2E5F26ED5EE6005293BD /* SearchLocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED2E5D26ED5EE6005293BD /* SearchLocationsTableViewCell.xib */; };
+		18ED2E5E26ED5EE6005293BD /* LocationsDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E5C26ED5EE6005293BD /* LocationsDetailTableViewCell.swift */; };
+		18ED2E5F26ED5EE6005293BD /* LocationsDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED2E5D26ED5EE6005293BD /* LocationsDetailTableViewCell.xib */; };
 		18ED2E6226ED77B5005293BD /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E6126ED77B5005293BD /* UITableView+Extensions.swift */; };
 		18ED2E6526ED78B2005293BD /* DetailLocationWeatherEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E6426ED78B2005293BD /* DetailLocationWeatherEndPoint.swift */; };
 		18ED2E6726ED78E0005293BD /* DetailLocationWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E6626ED78E0005293BD /* DetailLocationWeatherService.swift */; };
@@ -87,8 +87,8 @@
 		18ED2E5426ED4D47005293BD /* SearchLocationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationsViewController.xib; sourceTree = "<group>"; };
 		18ED2E5726ED4DC2005293BD /* SearchLocationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationsPresenter.swift; sourceTree = "<group>"; };
 		18ED2E5926ED4E89005293BD /* SearchLocationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationsRouter.swift; sourceTree = "<group>"; };
-		18ED2E5C26ED5EE6005293BD /* SearchLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationsTableViewCell.swift; sourceTree = "<group>"; };
-		18ED2E5D26ED5EE6005293BD /* SearchLocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationsTableViewCell.xib; sourceTree = "<group>"; };
+		18ED2E5C26ED5EE6005293BD /* LocationsDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDetailTableViewCell.swift; sourceTree = "<group>"; };
+		18ED2E5D26ED5EE6005293BD /* LocationsDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsDetailTableViewCell.xib; sourceTree = "<group>"; };
 		18ED2E6126ED77B5005293BD /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		18ED2E6426ED78B2005293BD /* DetailLocationWeatherEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationWeatherEndPoint.swift; sourceTree = "<group>"; };
 		18ED2E6626ED78E0005293BD /* DetailLocationWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationWeatherService.swift; sourceTree = "<group>"; };
@@ -163,7 +163,6 @@
 		186EE1D026ED2E8F0095A06E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18ED2E5B26ED5EC4005293BD /* cell */,
 				18ED2E5326ED4D47005293BD /* SearchLocationsViewController.swift */,
 				18ED2E5426ED4D47005293BD /* SearchLocationsViewController.xib */,
 			);
@@ -278,8 +277,8 @@
 		18ED2E5B26ED5EC4005293BD /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				18ED2E5C26ED5EE6005293BD /* SearchLocationsTableViewCell.swift */,
-				18ED2E5D26ED5EE6005293BD /* SearchLocationsTableViewCell.xib */,
+				18ED2E5C26ED5EE6005293BD /* LocationsDetailTableViewCell.swift */,
+				18ED2E5D26ED5EE6005293BD /* LocationsDetailTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -335,6 +334,7 @@
 		18ED2E6C26ED79ED005293BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18ED2E5B26ED5EC4005293BD /* cell */,
 				18ED2E7426ED7DDF005293BD /* DetailLocationViewController.swift */,
 				18ED2E7526ED7DDF005293BD /* DetailLocationViewController.xib */,
 			);
@@ -514,7 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18ED2E5F26ED5EE6005293BD /* SearchLocationsTableViewCell.xib in Resources */,
+				18ED2E5F26ED5EE6005293BD /* LocationsDetailTableViewCell.xib in Resources */,
 				18ED2E7726ED7DDF005293BD /* DetailLocationViewController.xib in Resources */,
 				1881F57D26ED1E4C00B175D0 /* LaunchScreen.storyboard in Resources */,
 				18ED2E5626ED4D47005293BD /* SearchLocationsViewController.xib in Resources */,
@@ -662,7 +662,7 @@
 				18ED2E4926ED3FE7005293BD /* ConsolidateWeatherEntity.swift in Sources */,
 				18ED2E7326ED7A69005293BD /* DetailModuleProtocols.swift in Sources */,
 				18ED2E4E26ED469B005293BD /* SearchLocationService.swift in Sources */,
-				18ED2E5E26ED5EE6005293BD /* SearchLocationsTableViewCell.swift in Sources */,
+				18ED2E5E26ED5EE6005293BD /* LocationsDetailTableViewCell.swift in Sources */,
 				18ED2E4326ED31B1005293BD /* NetworkConstants.swift in Sources */,
 				18ED2E5A26ED4E89005293BD /* SearchLocationsRouter.swift in Sources */,
 				18ED2E7626ED7DDF005293BD /* DetailLocationViewController.swift in Sources */,

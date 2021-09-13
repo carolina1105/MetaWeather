@@ -32,7 +32,7 @@ final class SearchLocationsViewController: UIViewController, SearchLocationViewP
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .white
+        appearance.backgroundColor = .systemGray4
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.compactAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
@@ -71,7 +71,7 @@ extension SearchLocationsViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count > 2 {
+        if searchText.count > 1 {
             presenter?.getLocations(with: searchText)
         } else if searchText.count == 0 {
             locations = []
@@ -99,6 +99,7 @@ extension SearchLocationsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         cell?.textLabel?.text = locations[indexPath.row].title
+        cell?.accessoryType = .disclosureIndicator
         
         return cell ?? UITableViewCell()
     }
