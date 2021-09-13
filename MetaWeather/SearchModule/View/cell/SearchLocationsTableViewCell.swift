@@ -2,28 +2,32 @@
 //  SearchLocationsTableViewCell.swift
 //  MetaWeather
 //
-//  Created by Laddy Diaz Lamus on 11/09/21.
+//  Created by Laddy Diaz Lamus on 12/09/21.
 //
 
 import UIKit
 
-class SearchLocationsTableViewCell: UIViewController {
+class SearchLocationsTableViewCell: UITableViewCell {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var typeLocation: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Configure the view for the selected state
     }
-    */
+    
+    func setCustom(_ location: LocationEntity) {
+        title.text = location.title
+        typeLocation.text = location.locationType
 
+    }
+    
 }

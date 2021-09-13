@@ -97,8 +97,12 @@ extension SearchLocationsViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = locations[indexPath.row].title
+        var cell = tableView.dequeueReusableCell(withIdentifier: "SearchLocationsTableViewCell") as? SearchLocationsTableViewCell
+        if (cell == nil) {
+            tableView.register(UINib(nibName: "SearchLocationsTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchLocationsTableViewCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: "SearchLocationsTableViewCell") as? SearchLocationsTableViewCell
+        }
+        cell?.setCustom(locations[indexPath.row])
         cell?.accessoryType = .disclosureIndicator
         
         return cell ?? UITableViewCell()
@@ -106,6 +110,10 @@ extension SearchLocationsViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.showDetailView(location: locations[indexPath.row], in: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     
