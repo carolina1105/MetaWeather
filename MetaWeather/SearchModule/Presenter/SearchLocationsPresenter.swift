@@ -5,7 +5,7 @@
 //  Created by Laddy Diaz Lamus on 11/09/21.
 //
 
-import Foundation
+import UIKit
 
 final class SearchLocationsPresenter: SearchLocationPresenterInputProtocol {
     
@@ -13,10 +13,12 @@ final class SearchLocationsPresenter: SearchLocationPresenterInputProtocol {
     var interactor: SearchLocationInteractorInputProtocol?
     var router: SearchLocationRouterProtocol?
     
-    //private var locations: [LocationEntity] = []
-    
     func getLocations(with text: String) {
         interactor?.execute(location: text)
+    }
+    
+    func showDetailView(location: LocationEntity, in view: UIViewController) {
+        router?.presentDetailView(of: location, with: view)
     }
 }
 

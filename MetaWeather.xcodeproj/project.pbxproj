@@ -30,6 +30,15 @@
 		18ED2E5A26ED4E89005293BD /* SearchLocationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E5926ED4E89005293BD /* SearchLocationsRouter.swift */; };
 		18ED2E5E26ED5EE6005293BD /* SearchLocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E5C26ED5EE6005293BD /* SearchLocationsTableViewCell.swift */; };
 		18ED2E5F26ED5EE6005293BD /* SearchLocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED2E5D26ED5EE6005293BD /* SearchLocationsTableViewCell.xib */; };
+		18ED2E6226ED77B5005293BD /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E6126ED77B5005293BD /* UITableView+Extensions.swift */; };
+		18ED2E6526ED78B2005293BD /* DetailLocationWeatherEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E6426ED78B2005293BD /* DetailLocationWeatherEndPoint.swift */; };
+		18ED2E6726ED78E0005293BD /* DetailLocationWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E6626ED78E0005293BD /* DetailLocationWeatherService.swift */; };
+		18ED2E7326ED7A69005293BD /* DetailModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E7226ED7A69005293BD /* DetailModuleProtocols.swift */; };
+		18ED2E7626ED7DDF005293BD /* DetailLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E7426ED7DDF005293BD /* DetailLocationViewController.swift */; };
+		18ED2E7726ED7DDF005293BD /* DetailLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED2E7526ED7DDF005293BD /* DetailLocationViewController.xib */; };
+		18ED2E7926ED7E1E005293BD /* DetailLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E7826ED7E1E005293BD /* DetailLocationPresenter.swift */; };
+		18ED2E7B26ED7F7A005293BD /* DetailLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E7A26ED7F7A005293BD /* DetailLocationInteractor.swift */; };
+		18ED2E7D26ED841C005293BD /* DetailLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2E7C26ED841C005293BD /* DetailLocationRouter.swift */; };
 		2212238A5A826AE859DB1DC8 /* Pods_MetaWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA422A752C9606FDF9EE1E46 /* Pods_MetaWeather.framework */; };
 		37ED8C3501D620BEBDE53317 /* Pods_MetaWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48443368D84469066F09F358 /* Pods_MetaWeatherTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +89,15 @@
 		18ED2E5926ED4E89005293BD /* SearchLocationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationsRouter.swift; sourceTree = "<group>"; };
 		18ED2E5C26ED5EE6005293BD /* SearchLocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationsTableViewCell.swift; sourceTree = "<group>"; };
 		18ED2E5D26ED5EE6005293BD /* SearchLocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationsTableViewCell.xib; sourceTree = "<group>"; };
+		18ED2E6126ED77B5005293BD /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		18ED2E6426ED78B2005293BD /* DetailLocationWeatherEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationWeatherEndPoint.swift; sourceTree = "<group>"; };
+		18ED2E6626ED78E0005293BD /* DetailLocationWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationWeatherService.swift; sourceTree = "<group>"; };
+		18ED2E7226ED7A69005293BD /* DetailModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleProtocols.swift; sourceTree = "<group>"; };
+		18ED2E7426ED7DDF005293BD /* DetailLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationViewController.swift; sourceTree = "<group>"; };
+		18ED2E7526ED7DDF005293BD /* DetailLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLocationViewController.xib; sourceTree = "<group>"; };
+		18ED2E7826ED7E1E005293BD /* DetailLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationPresenter.swift; sourceTree = "<group>"; };
+		18ED2E7A26ED7F7A005293BD /* DetailLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationInteractor.swift; sourceTree = "<group>"; };
+		18ED2E7C26ED841C005293BD /* DetailLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationRouter.swift; sourceTree = "<group>"; };
 		3930183E2FFB49025A0EE5D6 /* Pods-MetaWeather-MetaWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaWeather-MetaWeatherUITests.release.xcconfig"; path = "Target Support Files/Pods-MetaWeather-MetaWeatherUITests/Pods-MetaWeather-MetaWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		48443368D84469066F09F358 /* Pods_MetaWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetaWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506AA477AB8BFD8CD8C614ED /* Pods-MetaWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaWeather.release.xcconfig"; path = "Target Support Files/Pods-MetaWeather/Pods-MetaWeather.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +147,7 @@
 				186EE1D426ED2EB20095A06E /* Entity */,
 				186EE1D326ED2EAA0095A06E /* Router */,
 				186EE1CF26ED2E830095A06E /* Protocols */,
+				186EE1D526ED2F000095A06E /* Services */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -179,8 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				18ED2E4426ED3D6D005293BD /* LocationEntity.swift */,
-				18ED2E4626ED3E4C005293BD /* LocationDayWatherEntity.swift */,
-				18ED2E4826ED3FE7005293BD /* ConsolidateWeatherEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -189,9 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				18ED2E4C26ED4680005293BD /* SearchLocation */,
-				186EE1D626ED2F6E0095A06E /* BaseService.swift */,
-				18ED2E4226ED31B1005293BD /* NetworkConstants.swift */,
-				18ED2E4A26ED4483005293BD /* SearchLocationEndPoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,8 +235,10 @@
 		1881F56F26ED1E4200B175D0 /* MetaWeather */ = {
 			isa = PBXGroup;
 			children = (
+				18ED2E6A26ED796B005293BD /* Networking */,
+				18ED2E6826ED7936005293BD /* DetailModule */,
+				18ED2E6026ED779F005293BD /* Extensions */,
 				186EE1CE26ED2E600095A06E /* SearchModule */,
-				186EE1D526ED2F000095A06E /* Services */,
 				1881F57026ED1E4200B175D0 /* AppDelegate.swift */,
 				1881F57226ED1E4200B175D0 /* SceneDelegate.swift */,
 				1881F57926ED1E4C00B175D0 /* Assets.xcassets */,
@@ -254,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				18ED2E4D26ED469B005293BD /* SearchLocationService.swift */,
+				18ED2E4A26ED4483005293BD /* SearchLocationEndPoint.swift */,
 			);
 			path = SearchLocation;
 			sourceTree = "<group>";
@@ -265,6 +282,104 @@
 				18ED2E5D26ED5EE6005293BD /* SearchLocationsTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		18ED2E6026ED779F005293BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E6126ED77B5005293BD /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18ED2E6326ED78A1005293BD /* SearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E6426ED78B2005293BD /* DetailLocationWeatherEndPoint.swift */,
+				18ED2E6626ED78E0005293BD /* DetailLocationWeatherService.swift */,
+			);
+			path = SearchDetail;
+			sourceTree = "<group>";
+		};
+		18ED2E6826ED7936005293BD /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E6C26ED79ED005293BD /* View */,
+				18ED2E6E26ED79FA005293BD /* Interactor */,
+				18ED2E6D26ED79F2005293BD /* Presenter */,
+				18ED2E6F26ED7A00005293BD /* Entity */,
+				18ED2E7026ED7A16005293BD /* Router */,
+				18ED2E7126ED7A27005293BD /* Protocols */,
+				18ED2E6926ED7954005293BD /* Service */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		18ED2E6926ED7954005293BD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E6326ED78A1005293BD /* SearchDetail */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		18ED2E6A26ED796B005293BD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				186EE1D626ED2F6E0095A06E /* BaseService.swift */,
+				18ED2E4226ED31B1005293BD /* NetworkConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		18ED2E6C26ED79ED005293BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E7426ED7DDF005293BD /* DetailLocationViewController.swift */,
+				18ED2E7526ED7DDF005293BD /* DetailLocationViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18ED2E6D26ED79F2005293BD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E7826ED7E1E005293BD /* DetailLocationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18ED2E6E26ED79FA005293BD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E7A26ED7F7A005293BD /* DetailLocationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		18ED2E6F26ED7A00005293BD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E4626ED3E4C005293BD /* LocationDayWatherEntity.swift */,
+				18ED2E4826ED3FE7005293BD /* ConsolidateWeatherEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		18ED2E7026ED7A16005293BD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E7C26ED841C005293BD /* DetailLocationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		18ED2E7126ED7A27005293BD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2E7226ED7A69005293BD /* DetailModuleProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		668033D1336BC91672AB21A1 /* Frameworks */ = {
@@ -400,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ED2E5F26ED5EE6005293BD /* SearchLocationsTableViewCell.xib in Resources */,
+				18ED2E7726ED7DDF005293BD /* DetailLocationViewController.xib in Resources */,
 				1881F57D26ED1E4C00B175D0 /* LaunchScreen.storyboard in Resources */,
 				18ED2E5626ED4D47005293BD /* SearchLocationsViewController.xib in Resources */,
 				1881F57A26ED1E4C00B175D0 /* Assets.xcassets in Resources */,
@@ -531,17 +647,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				186EE1D726ED2F6E0095A06E /* BaseService.swift in Sources */,
+				18ED2E6726ED78E0005293BD /* DetailLocationWeatherService.swift in Sources */,
 				18ED2E5026ED48F6005293BD /* SearchLocationInteractor.swift in Sources */,
+				18ED2E7926ED7E1E005293BD /* DetailLocationPresenter.swift in Sources */,
 				18ED2E4526ED3D6D005293BD /* LocationEntity.swift in Sources */,
+				18ED2E6226ED77B5005293BD /* UITableView+Extensions.swift in Sources */,
 				18ED2E4726ED3E4C005293BD /* LocationDayWatherEntity.swift in Sources */,
+				18ED2E6526ED78B2005293BD /* DetailLocationWeatherEndPoint.swift in Sources */,
 				18ED2E5226ED4915005293BD /* SearchLocationProtocols.swift in Sources */,
+				18ED2E7D26ED841C005293BD /* DetailLocationRouter.swift in Sources */,
 				18ED2E4B26ED4483005293BD /* SearchLocationEndPoint.swift in Sources */,
+				18ED2E7B26ED7F7A005293BD /* DetailLocationInteractor.swift in Sources */,
 				18ED2E5526ED4D47005293BD /* SearchLocationsViewController.swift in Sources */,
 				18ED2E4926ED3FE7005293BD /* ConsolidateWeatherEntity.swift in Sources */,
+				18ED2E7326ED7A69005293BD /* DetailModuleProtocols.swift in Sources */,
 				18ED2E4E26ED469B005293BD /* SearchLocationService.swift in Sources */,
 				18ED2E5E26ED5EE6005293BD /* SearchLocationsTableViewCell.swift in Sources */,
 				18ED2E4326ED31B1005293BD /* NetworkConstants.swift in Sources */,
 				18ED2E5A26ED4E89005293BD /* SearchLocationsRouter.swift in Sources */,
+				18ED2E7626ED7DDF005293BD /* DetailLocationViewController.swift in Sources */,
 				18ED2E5826ED4DC2005293BD /* SearchLocationsPresenter.swift in Sources */,
 				1881F57126ED1E4200B175D0 /* AppDelegate.swift in Sources */,
 				1881F57326ED1E4200B175D0 /* SceneDelegate.swift in Sources */,

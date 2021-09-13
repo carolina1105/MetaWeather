@@ -8,9 +8,9 @@
 import Foundation
 
 struct ConsolidateWeatherResponseEntity: Decodable {
-    let consolidateWeather : [LocationDayWatherEntity]
+    let consolidateWeather: [LocationDayWatherEntity]
     
     private enum CodingKeys: String, CodingKey {
-        case consolidateWeather = "consolidate_weather"
+        case consolidateWeather = "consolidated_weather"
     }
 }

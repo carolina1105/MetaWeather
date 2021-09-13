@@ -20,6 +20,7 @@ protocol SearchLocationPresenterInputProtocol {
     var router: SearchLocationRouterProtocol? { get set }
     
     func getLocations(with text: String)
+    func showDetailView(location: LocationEntity, in view: UIViewController)
 }
 
 protocol SearchLocationPresenterOutputProtocol: AnyObject {
@@ -52,5 +53,5 @@ protocol SearchLocationServiceOutputProtocol: AnyObject {
 
 protocol SearchLocationRouterProtocol {
     static func createModule() -> SearchLocationsViewController
-    func presentDetailView(of location: LocationEntity)
+    func presentDetailView(of location: LocationEntity, with view: UIViewController)
 }

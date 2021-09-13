@@ -20,7 +20,6 @@ final class SearchLocationsViewController: UIViewController, SearchLocationViewP
         super.viewDidLoad()
         setupSearchController()
         setupTableView()
-        presenter?.getLocations(with: "london")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,11 +28,11 @@ final class SearchLocationsViewController: UIViewController, SearchLocationViewP
     }
     
     private func setupNavigationBar() {
-        self.navigationItem.title = "LOCATIONS"
+        self.navigationItem.title = "Locations"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .systemYellow
+        appearance.backgroundColor = .white
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.compactAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
@@ -43,7 +42,7 @@ final class SearchLocationsViewController: UIViewController, SearchLocationViewP
         searchController.searchBar.delegate = self
         
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "search"
+        searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -66,18 +65,34 @@ extension SearchLocationsViewController: SearchLocationPresenterOutputProtocol {
 
 // MARK: - SearchController Delegate
 extension SearchLocationsViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        locations = []
+        tableView.reloadData()
+    }
     
-    // func called when a user press the search button in the keyboard.
-    // execute the request to search items if there's text in the searchBar
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let searchText = searchBar.text {
-            //            presenter.executeSearch(with: searchText)
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count > 2 {
+            presenter?.getLocations(with: searchText)
+        } else if searchText.count == 0 {
+            locations = []
+            tableView.reloadData()
         }
     }
+    
+}
+
+extension SearchLocationsViewController: UISearchControllerDelegate {
+    
 }
 
 extension SearchLocationsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if locations.count == 0 {
+            tableView.setEmptyMessage("Search for your city weather!")
+        } else {
+            tableView.restore()
+        }
+        
         return locations.count
     }
     
@@ -89,7 +104,7 @@ extension SearchLocationsViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter?.showDetailView(location: locations[indexPath.row], in: self)
     }
     
     

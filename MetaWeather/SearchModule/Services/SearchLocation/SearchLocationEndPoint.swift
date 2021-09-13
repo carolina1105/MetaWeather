@@ -14,11 +14,3 @@ enum SearchLocationEndPoint: String {
         return "\(NetworkConstants.baseURL)\(rawValue)"
     }
 }
-
-enum GetWeatherDayLocationEndPoint: String {
-    case getLocations = "api/location/"
-    
-    var path: String {
-        return "\(NetworkConstants.baseURL)\(rawValue)"
-    }
-}

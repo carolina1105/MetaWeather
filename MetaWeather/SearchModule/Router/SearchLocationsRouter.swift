@@ -31,7 +31,10 @@ final class SearchLocationsRouter: SearchLocationRouterProtocol {
         return view as! SearchLocationsViewController
     }
     
-    func presentDetailView(of location: LocationEntity) {
-        //todo
+    func presentDetailView(of location: LocationEntity, with view: UIViewController) {
+        let detailVC = DetailLocationRouter.createModule()
+        detailVC.location = location
+        view.show(detailVC, sender: nil)
+        
     }
 }
